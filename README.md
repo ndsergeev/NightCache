@@ -8,20 +8,22 @@ The system caches all components, that need an void Update() into one list, then
 
 https://www.youtube.com/watch?v=7Dvir9Bf8X4
 
-1) Install NightCache components into your Unity project (it will calls all void Run, FixedRun and LateRun in scene)
+1) Install NightCache components into your Unity project (it will calls all void Run, FixedRun and LateRun in scene);
 
-2) Add component «NightCacheEntry» on any GameObject in scene
+2) Add component ```NightCacheEntry``` on any GameObject in scene;
 
-3) Inherit any class, which contains void Update / FixedUpdate / LateUpdate from «NightCache»
+3) Inherit any class, which contains void Start / Update / FixedUpdate / LateUpdate from ```NightCache```;
 
-4) Implement the required interfaces: «INightInit», «INightRun», «INightFixedRun» or «INightLateRun»
+4) Implement the required interfaces instead: ```INightInit```, ```INightRun```, ```INightFixedRun``` or ```INightLateRun```;
 
-5) Move the code from the old method to the new one
+5) Move the code from the old method to the new one;
 
-6) System will automatically add a new component «NightCacheInstallMachine» on GameObject, which contains a «NightCache» by RequireComponent. 
-If for some reason this did not happen, then add it manually.
+6) System will automatically add a new component ```NightCacheInstallMachine``` on GameObject, which contains a ```NightCache``` by RequireComponent. 
+If for some reason this did not happen, then add it manually;
 
-7) Everything is ready to use :)
+7) Add ScriptTemplates folder under Assets of your Unity project for the updated C# Script template;
+
+8) Everything is ready to use! :)
 
 UPD: See below documentation for MonoInstallable & NightCacheInstallable
 
@@ -82,7 +84,7 @@ public class UnitMovement : NightCache, INightInit, INightRun
 
 # MonoInstallable & NightCacheInstallable
 
-Installables contains virtual void OnFirstEnable()
+Installables contains ```virtual void OnFirstEnable()```
 This method is called once the first time the object is enabled
 
 MonoInstallable for MonoBehaviour, 

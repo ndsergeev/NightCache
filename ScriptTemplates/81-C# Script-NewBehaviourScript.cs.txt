@@ -1,0 +1,18 @@
+
+namespace NAMESPACE
+{
+    using NTC.Global.Cache;
+    
+    public class #SCRIPTNAME# : NightCache, INightInit, INightRun
+    {
+        // Use this for initialization
+        public void Init()
+        {
+        }
+  
+        // Run is called once per frame
+        public void Run()
+        {
+        }
+    }
+}
